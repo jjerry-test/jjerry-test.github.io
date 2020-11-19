@@ -225,7 +225,12 @@ batch_size <span style="color:#f92672">=</span> batch_size_each_gpu<span style="
 
 history <span style="color:#f92672">=</span> cnn<span style="color:#f92672">.</span>fit(train_x, train_y, epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>, batch_size<span style="color:#f92672">=</span>batch_size, validation_data<span style="color:#f92672">=</span>(test_x, test_y))
 </code></pre></div><p>어렵지 않습니다. <code>Build Network</code> 주석 부분과 <code>Training Network</code> 부분에 <code>batch_size</code>만 조금 수정해주시면 끝납니다!<br>
-<img src="https://jjerry-k.github.io/public/img/tf_multi_gpu/bob.png" alt="img"></p>
+<figure>
+    <img src="/images/post/tf_multi_gpu/bob.png%29%20"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+</p>
 <p>하지만 이렇게 하면 무식하게 GPU의 모든 메모리를 할당합니다.<br>
 그렇기 떄문에 다음과 같이 코드를 추가하여 <code>필요한 만큼</code> 할당하도록 합니다.</p>
 <h2 id="필요한-만큼의-gpu-메모리만-사용하기">필요한 만큼의 GPU 메모리만 사용하기</h2>

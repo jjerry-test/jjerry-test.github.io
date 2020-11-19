@@ -169,10 +169,25 @@
 <li>Coral Accelerator</li>
 <li>Webcam</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/coral/01.png" alt="01.jpg"></p>
+<figure>
+    <img src="/images/post/coral/01.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h1 id="step-1-연결">Step 1. 연결</h1>
-<p><img src="https://jjerry-k.github.io/public/img/coral/02.png" alt="02.jpg"></p>
-<p><img src="https://jjerry-k.github.io/public/img/coral/03.png" alt="03.jpg"></p>
+<figure>
+    <img src="/images/post/coral/02.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/coral/03.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <p>모두 연결 후 라즈베리파이를 켜면 위 사진과 같이 USB에 흰색 불이 들어옵니다.</p>
 <h1 id="step-2-라즈베리파이-세팅">Step 2. 라즈베리파이 세팅</h1>
 <pre><code>#!/bin/bash
@@ -199,7 +214,12 @@ sh download_models.sh
 </code></pre>
 <p><code>download_models.sh</code>를 실행하시면 다음과 같이  <code>all_models</code>라는 디렉토리 안에 각 데이터셋 별 labelmap.txt와 학습된 모델의 tflite 파일이 있습니다.</p>
 <p>여기서 밑줄 친 파일을 이용해서 object detection 을 해볼겁니다! 일단 그 다음 세팅으로 넘어가죠.</p>
-<p><img src="https://jjerry-k.github.io/public/img/coral/04.png" alt="04.png"></p>
+<figure>
+    <img src="/images/post/coral/04.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <pre><code>#!/bin/bash
 
 cd opencv
@@ -229,7 +249,12 @@ optional arguments:
 --top_k 3 \
 --threshold 0.7
 </code></pre>
-<p><img src="https://jjerry-k.github.io/public/img/coral/05.png" alt="05.png"></p>
+<figure>
+    <img src="/images/post/coral/05.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <p>막 빠를 줄 알았는데 Webcam 의 한계라 그런지&hellip; FPS가 낮네요..</p>
 <p>추후에 카메라 모듈을 이용해서 해봐야겠습니다.</p>
 <p>그럼 간단한 이용기를 마치겠습니다.</p>

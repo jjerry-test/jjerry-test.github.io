@@ -165,13 +165,23 @@ URL: <a href="https://arxiv.org/abs/1807.06521">https://arxiv.org/abs/1807.06521
 <li>Convolution을 이용하여 channel, spatial information 을 추출하고 섞어서 사용.</li>
 <li>channel, spatial attention module은 각각 &ldquo;what&rdquo;, &ldquo;where&quot;에 대한 정보를 학습할 수 있음.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled.png"></p>
+<figure>
+    <img src="/images/post/cbam/Untitled.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h1 id="convolutional-block-attention-module">Convolutional Block Attention Module</h1>
 <ul>
 <li>CBAM 의 구조는 다음 사진과 같음.</li>
 </ul>
 <p>$$F: \text{Input feature map} \ F':\text{Channel attention module feature map} \ F'': \text{Spatial attention module feature map} \ F' = M_c(F)\bigotimes F \F'' = M_s(F')\bigotimes F'$$</p>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_1.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_1.png"></p>
+<figure>
+    <img src="/images/post/cbam/Untitled_1.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="channel-attention-branch">Channel attention branch</h2>
 <p>$$M_c(F) = \sigma(MLP(AvgPool(F)) + MLP(MaxPool(F))) \ = \sigma(W1(W0(F^c_{avg})) + W1(W0(F^c_{max})))$$</p>
 <p>W0 의 output channel 크기: F의 채널 수 / reduction ratio(r)</p>
@@ -191,27 +201,72 @@ URL: <a href="https://arxiv.org/abs/1807.06521">https://arxiv.org/abs/1807.06521
 <ul>
 <li>Pooling 기법별 성능 비교</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_2.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_2.png"></p>
+<figure>
+    <img src="/images/post/cbam/Untitled_2.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="spatial-attention">Spatial attention</h2>
 <ul>
 <li>Pooling, convolution kernel size 에 따른 성능 비교</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_3.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_3.png"></p>
+<figure>
+    <img src="/images/post/cbam/Untitled_3.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="arrangement-of-the-channel-and-spatial-attention">Arrangement of the channel and spatial attention</h2>
 <ul>
 <li>Attention module 순서에 따른 성능 비교</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_4.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_4.png"></p>
+<figure>
+    <img src="/images/post/cbam/Untitled_4.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h1 id="result">Result</h1>
 <h3 id="classification-result-on-imagenet-1k">Classification Result on ImageNet-1K</h3>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_5.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_5.png"></p>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_6.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_6.png"></p>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_7.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_7.png"></p>
+<figure>
+    <img src="/images/post/cbam/Untitled_5.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/cbam/Untitled_6.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/cbam/Untitled_7.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="object-detection-on-ms-coco-and-voc-2007">Object Detection on MS COCO and VOC 2007</h3>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_8.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_8.png"></p>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_9.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_9.png"></p>
+<figure>
+    <img src="/images/post/cbam/Untitled_8.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/cbam/Untitled_9.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="network-visualization-with-grad-cam">Network Visualization with Grad-CAM</h3>
-<p><img src="https://jjerry-k.github.io/public/img/cbam/Untitled_10.png" alt="https://jjerry-k.github.io/public/img/cbam/Untitled_10.png"></p>
+<figure>
+    <img src="/images/post/cbam/Untitled_10.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="ps">P.S</h2>
 <ul>
 <li>BAM과 동일하게 Original Code가 있지만&hellip;.논문과 다른 부분이 매우 많음.</li>

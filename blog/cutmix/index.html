@@ -166,7 +166,12 @@ URL: <a href="https://arxiv.org/abs/1905.04899">https://arxiv.org/abs/1905.04899
 <li>그 외에도 일부분을 0으로 채운다거나 노이즈로 채우는 방법, 정보가 있는 부분의 pixel을 줄이는 방법 등이 성능 향상을 보였으나 CNN은 데이터가 많이 고픈데&hellip;.데이터를 없앤다..? 라는 부분에서 의문을 가짐.</li>
 <li>영상의 일부를 자르고 다른 영상으로 대체하는 CutMix 를 제안.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h1 id="cutmix">CutMix</h1>
 <h2 id="algorithm">Algorithm</h2>
 <ul>
@@ -189,44 +194,89 @@ URL: <a href="https://arxiv.org/abs/1905.04899">https://arxiv.org/abs/1905.04899
 <ul>
 <li>CutMix를 이용했을 때 CNN이 어느 부분을 학습하는지 확인.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_1.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_1.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_1.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>다른 method와 비교하여 CutMix의 주요 차이점.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_2.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_2.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_2.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>Validation Error를 비교했을 때 기존의 모델에 비해 CutMix 적용시 Error가 낮음.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_3.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_3.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_3.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h1 id="experiments">Experiments</h1>
 <h2 id="image-classification">Image Classification</h2>
 <h3 id="imagenet-classification">ImageNet Classification</h3>
 <ul>
 <li>Baseline, 다른 augmentation method와 비교</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_4.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_4.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_4.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>두 Model에 CutMix를 적용하여 성능 비교.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_5.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_5.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_5.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="cifar-classification">CIFAR Classification</h3>
 <ul>
 <li>다른 Regularization 들과 비교.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_6.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_6.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_6.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>가벼운 Model 에 적용하여 비교.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_7.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_7.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_7.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>CIFAR-10에 적용한 결과.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_8.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_8.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_8.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="ablation-studies">Ablation Studies</h3>
 <ul>
 <li><strong>CutMix 에서 alpha가 뭐지&hellip;&hellip;.</strong></li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_9.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_9.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_9.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>CutMix하는 방법을 다양하게 적용했을 때 성능 비교</li>
 <li>Center Gaussian: Uniform distribution → Gaussian distribution</li>
@@ -235,36 +285,76 @@ URL: <a href="https://arxiv.org/abs/1905.04899">https://arxiv.org/abs/1905.04899
 <li>One-hot: 패치 비율에 따라 Portion label이 아닌 One-hot encoding으로 적용</li>
 <li>Complete-label: lambda 를 고려하지 않고 $y = 0.5y_A + 0.5y_B$로 적용</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_10.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_10.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_10.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="weakly-supervised-object-localization">Weakly Supervised Object Localization</h2>
 <ul>
 <li>Localization 부분에 대해 다른 방법들과 비교.</li>
 <li>학습 후 CAM을 이용해서 bounding box를 그린 것으로 보임.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_11.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_11.png"></p>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_12.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_12.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_11.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/cutmix/Untitled_12.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="transfer-learning-of-pretrained-model">Transfer Learning of Pretrained Model</h2>
 <ul>
 <li>Object detection, Image captioning 에 적용하여 성능 비교.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_13.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_13.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_13.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="robustness-and-uncertainty">Robustness and Uncertainty</h2>
 <ul>
 <li>Adversarial attack 에 대해 Accuracy 비교.</li>
 <li><a href="https://arxiv.org/abs/1412.6572">Fast Gradient Sign Method (FGSM)</a>을 이용하여 adversarial perturbation 생성.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_14.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_14.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_14.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>Occlusion 상황에 대해서 성능 비교.</li>
 <li>가운데 부분 혹은 Boundary 에 0~224 크기 사이의 hole을 생성.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_15.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_15.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_15.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>Uncertainty</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_16.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_16.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_16.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="cutmix-algorithm">CutMix Algorithm</h2>
-<p><img src="https://jjerry-k.github.io/public/img/cutmix/Untitled_17.png" alt="https://jjerry-k.github.io/public/img/cutmix/Untitled_17.png"></p>
+<figure>
+    <img src="/images/post/cutmix/Untitled_17.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="ps">P.S</h2>
 <ul>
 <li>Appendix에 내용이 더 있지만&hellip; 간단히 정리하려니 넣기 좀 힘듦.</li>

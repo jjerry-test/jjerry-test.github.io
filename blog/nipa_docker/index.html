@@ -163,11 +163,21 @@
 <p>물론 기본적으로 설치된 Anaconda  환경으로도 충분할 수 있지만 살짝쿵 문제가 있습니다.</p>
 <p>문제에 대해 살펴보겠습니다.</p>
 <p>NIPA GPU 서버에 접속을 하면 다음과 같은 화면이 출력됩니다.</p>
-<p><img src="https://jjerry-k.github.io/public/img/nipa_docker/Untitled.png" alt="Untitled.png"></p>
+<figure>
+    <img src="/images/post/nipa_docker/Untitled.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <p>먼저 말씀드렸던 conda 환경으로 기본적으로 다양한 환경이 제공되네요.</p>
 <p>저의 경우 이번에 tf-nightly가 필요했습니다.</p>
 <p>그래서 TensorFlow2, python3.6 환경을 activate  한 후 설치를 시도했죠.</p>
-<p><img src="https://jjerry-k.github.io/public/img/nipa_docker/Untitled_1.png" alt="NIPA%20x%20Docker%20ef94d24dfbc64a6cae24a83a59bd352f/Untitled%201.png"></p>
+<figure>
+    <img src="/images/post/nipa_docker/Untitled_1.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <table>
 <thead>
 <tr>
@@ -181,7 +191,12 @@
 </tbody>
 </table>
 <p>음&hellip;.conda 버전의 문제인가 싶어서 base conda를 update  하려 했습니다.</p>
-<p><img src="https://jjerry-k.github.io/public/img/nipa_docker/Untitled_3.png" alt="NIPA%20x%20Docker%20ef94d24dfbc64a6cae24a83a59bd352f/Untitled%203.png"></p>
+<figure>
+    <img src="/images/post/nipa_docker/Untitled_3.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <table>
 <thead>
 <tr>
@@ -231,7 +246,12 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 <span style="color:#75715e"># VERIFY THAT DOCKER ENGINE IS INSTALLED CORRECTLY</span>
 sudo docker run hello-world
 </code></pre></div><p>만약에 제대로 설치 되었다면 마지막에 다음과 같은 출력이 남습니다</p>
-<p><img src="https://jjerry-k.github.io/public/img/nipa_docker/Untitled_4.png" alt="NIPA%20x%20Docker%20ef94d24dfbc64a6cae24a83a59bd352f/Untitled%204.png"></p>
+<figure>
+    <img src="/images/post/nipa_docker/Untitled_4.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <p>여기까지 하시면 기본 Docker 설치는 끝났습니다.</p>
 <p>하지만 이것만 설치하면 GPU 는 사용하지 못합니다.</p>
 <p>GPU를 쓰기 위해선 <a href="https://github.com/NVIDIA/nvidia-docker">nvidia-docker</a>를 설치를 해야 합니다.</p>
@@ -249,7 +269,12 @@ sudo systemctl restart docker
 <span style="color:#75715e"># Test nvidia-docker</span>
 sudo docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 </code></pre></div><p>이 또한 설치가 제대로 되었다면 마지막에 다음과 같이 <code>nvidia-smi</code> 출력이 나올 겁니다.</p>
-<p><img src="https://jjerry-k.github.io/public/img/nipa_docker/Untitled_5.png" alt="NIPA%20x%20Docker%20ef94d24dfbc64a6cae24a83a59bd352f/Untitled%205.png"></p>
+<figure>
+    <img src="/images/post/nipa_docker/Untitled_5.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <table>
 <thead>
 <tr>

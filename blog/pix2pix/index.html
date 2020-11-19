@@ -165,13 +165,23 @@ URL: <a href="https://arxiv.org/abs/1611.07004">https://arxiv.org/abs/1611.07004
 <li>이 논문의 main contribution은 다양한 문제에서 Conditional GAN이 합리적인 결과를 생성한다는 것을 입증하는 것.</li>
 <li>이를 위해 Image-to-Image translation 으로 연구 진행.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h1 id="method">Method</h1>
 <ul>
 <li>정말 간단한 구조</li>
 <li>다음 사진은 Edge(Sketch) 영상을 Photo 영상으로 만드는 예시.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_1.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_1.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_1.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="objective">Objective</h2>
 <p>$$\mathcal{L}<em>{cGAN}(G, D) = \mathbb{E}</em>{x, y}[\log D(x, y)] + \mathbb{E}_{x, z}[\log (1-D(x, G(x, z))]$$</p>
 <p>$$\mathcal{L}<em>{L1}(G) = \mathbb{E}</em>{x, y, z}[||y-G(x,z)||_1]$$</p>
@@ -188,7 +198,12 @@ URL: <a href="https://arxiv.org/abs/1611.07004">https://arxiv.org/abs/1611.07004
 <ul>
 <li>U-Net 과 비슷하나 Concatenate를 Add로 변경.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_2.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_2.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_2.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="markovian-discriminator-patchgan">Markovian discriminator (PatchGAN)</h3>
 <ul>
 <li>L1, L2 만 사용하면 blurry result가 만들어진다는 것은 많이 알려진 사항.</li>
@@ -196,7 +211,12 @@ URL: <a href="https://arxiv.org/abs/1611.07004">https://arxiv.org/abs/1611.07004
 <li>좀 더 다양한 High frequency 에 적합하도록 하기 위해 local image patch 에 대해 discriminator를 적용. (PatchGAN)</li>
 <li>NxN patch 에 대해 각각 real/fake를 판별.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_3.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_3.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_3.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="optimization-and-inference">Optimization and Inference</h2>
 <ul>
 <li>D → G 와 같은 순서로 학습 진행</li>
@@ -227,41 +247,101 @@ URL: <a href="https://arxiv.org/abs/1611.07004">https://arxiv.org/abs/1611.07004
 <li>FCN-score</li>
 </ul>
 <h2 id="analysis-of-the--objective-function">Analysis of the  objective function</h2>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_3.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_3.png"></p>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_4.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_4.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_3.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/pix2pix/Untitled_4.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="analysis-of-the-generator-architecture">Analysis of the generator architecture</h2>
 <ul>
 <li>U-Net 기반의 구조로 했을 때가 훨씬 좋음.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_5.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_5.png"></p>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_6.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_6.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_5.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/pix2pix/Untitled_6.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="from-pixelgans-to-patchgans-to-imagegans">From PixelGANs to PatchGANs to ImageGANs</h2>
 <ul>
 <li>Discriminator의 출력을 1x1, 16x16, 70x70, 286x286과 같이 차례로 키우면서 실험.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_7.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_7.png"></p>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_8.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_8.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_7.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/pix2pix/Untitled_8.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="perceptual-validation">Perceptual validation</h2>
 <ul>
 <li>사람이 보기에도 L1 + cGAN이 좋음.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_9.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_9.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_9.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>Colorization에서는 좀 떨어짐.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_10.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_10.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_10.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="semantic-segmentation">Semantic segmentation</h2>
 <ul>
 <li>해당 task 에서는 오히려 L1과 같은 reconstruction loss만을 이용한 구조가 적합해 보임.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_11.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_11.png"></p>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_12.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_12.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_11.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/pix2pix/Untitled_12.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="community-driven-research">Community-driven Research</h2>
 <ul>
 <li>Twitter 에 공개한 후 다른 연구자들의 실험.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_13.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_13.png"></p>
-<p><img src="https://jjerry-k.github.io/public/img/pix2pix/Untitled_14.png" alt="https://jjerry-k.github.io/public/img/pix2pix/Untitled_14.png"></p>
+<figure>
+    <img src="/images/post/pix2pix/Untitled_13.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/images/post/pix2pix/Untitled_14.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="ps">P.S</h2>
 <ul>
 <li>장마철&hellip; 물 조심하세요..</li>

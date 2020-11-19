@@ -173,15 +173,30 @@ URL: <a href="https://arxiv.org/abs/1707.01083">https://arxiv.org/abs/1707.01083
 <li>상대적으로 연산량이 많은 1x1 Convolution을 ResNeXt 에서 사용한 Group Convolution 으로 적용.</li>
 <li>하지만 Group으로 계속 진행하다보면 특정 채널에 편향된 결과를 보이는 문제가 생길 것이므로 channel을 shuffle 해줌.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="shufflenet-unit">ShuffleNet Unit</h2>
 <ul>
 <li>ShuffleNet에서 사용된 Bottle unit은 Xception과 MobileNet에서 사용된 Residual Block에서 1x1 Convolution을 Group Convolution으로 변경하고 Channel Shuffle을 추가한 것.</li>
 <li>Stride unit 에선 element-wise addition이 아닌 concatenation으로 대체.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_1.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_1.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled_1.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="network-architecture">Network Architecture</h2>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_2.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_2.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled_2.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h1 id="result">Result</h1>
 <h2 id="ablation-study">Ablation Study</h2>
 <h3 id="pointwise-group-convolutions">Pointwise Group Convolutions</h3>
@@ -196,37 +211,72 @@ URL: <a href="https://arxiv.org/abs/1707.01083">https://arxiv.org/abs/1707.01083
 <p>무조건 많이 나눈다고 좋은 것은 아님.</p>
 </li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_3.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_3.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled_3.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="channel-shuffle-vs-no-shuffle">Channel Shuffle vs. No Shuffle</h3>
 <ul>
 <li>Channel Shuffle 여부에 따른 성능 비교.</li>
 <li>Shuffle 적용시 성능이 뚜렷하게 증가한 것을 확인.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_4.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_4.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled_4.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="comparison-with-other-sturcture-units">Comparison with Other Sturcture Units</h2>
 <ul>
 <li>제한된 연산량 내에서 다른 Network 들과 성능 비교.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_5.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_5.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled_5.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <ul>
 <li>기존에 비슷한 성능의 Network들과 연산량 비교.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_6.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_6.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled_6.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="comparison-with-mobilenets-and-other-frameworks">Comparison with MobileNets and Other Frameworks</h2>
 <ul>
 <li>Mobile devices에 특화된 MobileNet과 성능 비교</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_7.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_7.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled_7.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="generalization-ability">Generalization Ability</h2>
 <ul>
 <li>MS COCO Data를 사용하여 Object detection 성능 비교.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_8.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_8.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled_8.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="actual-speedup-evaluation">Actual Speedup Evaluation</h2>
 <ul>
 <li>Mobile device에서 Inference 속도 비교.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_9.png" alt="https://jjerry-k.github.io/public/img/shufflenetv1/Untitled_9.png"></p>
+<figure>
+    <img src="/images/post/shufflenetv1/Untitled_9.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="ps">P.S</h2>
 <ul>
 <li>GPU가 부족해서 했다던 Group Convolution의 부활..?</li>

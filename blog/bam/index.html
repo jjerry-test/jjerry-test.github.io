@@ -191,13 +191,23 @@ URL: <a href="https://arxiv.org/abs/1807.06514">https://arxiv.org/abs/1807.06514
 <p>본 논문에선 attention 의 효과를 보기 위해 기존의 architecture 에 사용하기 쉬운 가벼운 Bottle Attention Module(BAM) 제안</p>
 </li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/bam/Untitled.png" alt="https://jjerry-k.github.io/public/img/bam/Untitled.png"></p>
+<figure>
+    <img src="/images/post/bam/Untitled.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h1 id="bottleneck-attention-module">Bottleneck Attention Module</h1>
 <ul>
 <li>BAM 의 구조는 다음 사진과 같음.</li>
 </ul>
 <p>$$F: \text{Input feature map} \ M(F): \text{Attention map} \F' = F + F\bigotimes M(F) \ M(F) = \sigma(M_c(F) + M_s(F))$$</p>
-<p><img src="https://jjerry-k.github.io/public/img/bam/Untitled_1.png" alt="https://jjerry-k.github.io/public/img/bam/Untitled_1.png"></p>
+<figure>
+    <img src="/images/post/bam/Untitled_1.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="channel-attention-branch">Channel attention branch</h2>
 <p>$$M_c(F) = BN(MLP(AvgPool(F))) \ = BN(W_1(W_0AvgPool(F) + b_0)+b_1)$$</p>
 <p>W0 의 output channel 크기: F의 채널 수 / reduction ratio(r)</p>
@@ -233,19 +243,44 @@ URL: <a href="https://arxiv.org/abs/1807.06514">https://arxiv.org/abs/1807.06514
 <li>BAM 사용 여부에 따른 성능 비교</li>
 <li>Table 1 (c)</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/bam/Untitled_2.png" alt="https://jjerry-k.github.io/public/img/bam/Untitled_2.png"></p>
+<figure>
+    <img src="/images/post/bam/Untitled_2.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="bottleneck-the-efficient-point-to-place-bam">Bottleneck: The efficient point to place BAM</h2>
 <ul>
 <li>BAM 사용 위치에 따른 성능 비교.</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/bam/Untitled_3.png" alt="https://jjerry-k.github.io/public/img/bam/Untitled_3.png"></p>
+<figure>
+    <img src="/images/post/bam/Untitled_3.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h1 id="result">Result</h1>
 <h2 id="classification-result-on-cifar-100-and-imagenet-1k">Classification Result on CIFAR-100 and ImageNet-1K</h2>
-<p><img src="https://jjerry-k.github.io/public/img/bam/Untitled_4.png" alt="https://jjerry-k.github.io/public/img/bam/Untitled_4.png"></p>
+<figure>
+    <img src="/images/post/bam/Untitled_4.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="object-detection-on-ms-coco-and-voc-2007">Object Detection on MS COCO and VOC 2007</h2>
-<p><img src="https://jjerry-k.github.io/public/img/bam/Untitled_5.png" alt="https://jjerry-k.github.io/public/img/bam/Untitled_5.png"></p>
+<figure>
+    <img src="/images/post/bam/Untitled_5.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h2 id="comparison-with-squeeze-and-excitation">Comparison with Squeeze-and-Excitation</h2>
-<p><img src="https://jjerry-k.github.io/public/img/bam/Untitled_6.png" alt="https://jjerry-k.github.io/public/img/bam/Untitled_6.png"></p>
+<figure>
+    <img src="/images/post/bam/Untitled_6.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="ps">P.S</h3>
 <ul>
 <li>Original Code가 있지만&hellip;.논문과 다른 부분이 매우 많음.</li>

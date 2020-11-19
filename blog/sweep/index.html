@@ -316,12 +316,27 @@ model<span style="color:#f92672">.</span>fit(x<span style="color:#f92672">=</spa
 </code></pre></div><h3 id="2-기본-값으로-학습-진행">2. 기본 값으로 학습 진행.</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">python train<span style="color:#f92672">.</span>py
 </code></pre></div><p>그 후에 Weights &amp; Biases 로 가보면 다음과 같이 프로젝트가 만들어진 것을 확인 할 수 있습니다.</p>
-<p><img src="https://jjerry-k.github.io/public/img/sweep/Untitled.png" alt="https://jjerry-k.github.io/public/img/sweep/Untitled.png"></p>
+<figure>
+    <img src="/images/post/sweep/Untitled.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="3-sweep-configuration">3. sweep configuration</h3>
 <p>프로젝트 창에서 왼쪽에 <strong>빗자루 모양 아이콘</strong>을 누른 후에 오른쪽 상단에 <strong>Create sweep</strong> 를 눌러줍니다. ****</p>
-<p><img src="https://jjerry-k.github.io/public/img/sweep/Untitled_1.png" alt="https://jjerry-k.github.io/public/img/sweep/Untitled_1.png"></p>
+<figure>
+    <img src="/images/post/sweep/Untitled_1.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <p>그러면 다음과 같은 창이 나오는데요. 이제 hyper parameter search를 어떻게 할건지 세팅하는 단계입니다.</p>
-<p><img src="https://jjerry-k.github.io/public/img/sweep/Untitled_2.png" alt="https://jjerry-k.github.io/public/img/sweep/Untitled_2.png"></p>
+<figure>
+    <img src="/images/post/sweep/Untitled_2.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <p>저는 다음과 같이 세팅을 했습니다.</p>
 <p>이렇게 하면 grid search&hellip;니까&hellip;.</p>
 <p>2 * 5 * 3 * 2 * 3 = 180 개의 결과가 나오겠군요&hellip;</p>
@@ -346,13 +361,23 @@ model<span style="color:#f92672">.</span>fit(x<span style="color:#f92672">=</spa
   <span style="color:#f92672">learning_rate</span>:
     <span style="color:#f92672">values</span>: [<span style="color:#ae81ff">0.001</span>, <span style="color:#ae81ff">0.005</span>, <span style="color:#ae81ff">0.0005</span>]
 </code></pre></div><p>그리고 Initialize Sweep 를 눌러줍니다! 그러면 다음과 같은 화면이 나올거에요!</p>
-<p><img src="https://jjerry-k.github.io/public/img/sweep/Untitled_3.png" alt="https://jjerry-k.github.io/public/img/sweep/Untitled_3.png"></p>
+<figure>
+    <img src="/images/post/sweep/Untitled_3.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="4-sweep-실행">4. Sweep 실행</h3>
 <p>가운데에 적혀있는 커맨드를 터미널에서 실행시켜줍니다!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wandb agent <span style="color:#f92672">{</span>sweep-id<span style="color:#f92672">}</span>
 </code></pre></div><p>그러면 터미널에 wandb: Starting wandb agent 🕵️ 이런 문구와 함께 세팅대로 Network를 학습하게 됩니다!</p>
 <p>이제 잠시 티타임을&hellip;가집니다.. (잠깐이 아닐 수도 있음..)</p>
-<p><img src="https://jjerry-k.github.io/public/img/sweep/Untitled_4.png" alt="https://jjerry-k.github.io/public/img/sweep/Untitled_4.png"></p>
+<figure>
+    <img src="/images/post/sweep/Untitled_4.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <h3 id="5-결과-확인">5. 결과 확인</h3>
 <p>Weights &amp; Biases 화면에서 <strong>View Sweep</strong> 을 눌러주세요!</p>
 <p>그리고 좌측에 Plot 아이콘을 누르면 다음과 같은 화면이 나옵니다!</p>
@@ -363,7 +388,12 @@ model<span style="color:#f92672">.</span>fit(x<span style="color:#f92672">=</spa
 <li>hyper parameter와 목표 값( 저는 loss ) 간의 중요도, 상관관계</li>
 <li>각 학습 별 Parallel graph</li>
 </ul>
-<p><img src="https://jjerry-k.github.io/public/img/sweep/Untitled_5.png" alt="https://jjerry-k.github.io/public/img/sweep/Untitled_5.png"></p>
+<figure>
+    <img src="/images/post/sweep/Untitled_5.png"/> <figcaption>
+            <h4>image</h4>
+        </figcaption>
+</figure>
+
 <p>이번엔 Hyper parameter tuning을 편하게 할 수 있는 Weighs &amp; Biases의 Sweep에 대해 알아봤습니다.</p>
 <p>일일히 값을 변경하지 않고 지정해 놓으면 알아서 진행을 할테니..사용자는 좀 쉴&hellip;&hellip;수 있겠죠..? (아닐 듯..)</p>
 <p>그럼 포스팅을 마치겠습니다! 감사합니다!</p>
