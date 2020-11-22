@@ -167,18 +167,14 @@
 <p>문제에 대해 살펴보겠습니다.</p>
 <p>NIPA GPU 서버에 접속을 하면 다음과 같은 화면이 출력됩니다.</p>
 <figure>
-    <img src="/images/post/nipa_docker/Untitled.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/nipa_docker/Untitled.png"/> 
 </figure>
 
 <p>먼저 말씀드렸던 conda 환경으로 기본적으로 다양한 환경이 제공되네요.</p>
 <p>저의 경우 이번에 tf-nightly가 필요했습니다.</p>
 <p>그래서 TensorFlow2, python3.6 환경을 activate  한 후 설치를 시도했죠.</p>
 <figure>
-    <img src="/images/post/nipa_docker/Untitled_1.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/nipa_docker/Untitled_1.png"/> 
 </figure>
 
 <table>
@@ -195,9 +191,7 @@
 </table>
 <p>음&hellip;.conda 버전의 문제인가 싶어서 base conda를 update  하려 했습니다.</p>
 <figure>
-    <img src="/images/post/nipa_docker/Untitled_3.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/nipa_docker/Untitled_3.png"/> 
 </figure>
 
 <table>
@@ -250,9 +244,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo docker run hello-world
 </code></pre></div><p>만약에 제대로 설치 되었다면 마지막에 다음과 같은 출력이 남습니다</p>
 <figure>
-    <img src="/images/post/nipa_docker/Untitled_4.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/nipa_docker/Untitled_4.png"/> 
 </figure>
 
 <p>여기까지 하시면 기본 Docker 설치는 끝났습니다.</p>
@@ -273,9 +265,7 @@ sudo systemctl restart docker
 sudo docker run --gpus all nvidia/cuda:10.0-base nvidia-smi
 </code></pre></div><p>이 또한 설치가 제대로 되었다면 마지막에 다음과 같이 <code>nvidia-smi</code> 출력이 나올 겁니다.</p>
 <figure>
-    <img src="/images/post/nipa_docker/Untitled_5.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/nipa_docker/Untitled_5.png"/> 
 </figure>
 
 <table>

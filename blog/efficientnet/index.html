@@ -184,8 +184,17 @@ URL: <a href="https://arxiv.org/abs/1905.11946">https://arxiv.org/abs/1905.11946
 <li>Design space를 줄이기 위해 모든 레이어는 상수 값을 이용하여 규칙적으로 변화하도록 함.</li>
 <li>최종 목적은 제한된 리소스에서 성능을 최대화하는 것.</li>
 </ul>
-<p>$$\mathcal{N}: \text{ConvNet} \ \mathcal{F}_i: \text{Layer architecture} \ L_i: \text{Network length} \ C_i: \text{Width} \ H_i, W_i: \text{Input resolution}$$</p>
-<p>$${max}<em>{d, w, r} Accuracy(\mathcal{N}(d, w, r)) \ s.t. \mathcal{N}(d, w, r) = \bigodot</em>{i=1&hellip;s}\hat{\mathcal{F}}_i^{d \cdot \hat{L}<em>i}(X</em>{\langle r\cdot \hat{H}_i, r \cdot \hat{W}_i, w\cdot \hat{C}_i \rangle} ) \ Memory(\mathcal{N}) \leq \text{target memory} \FLOPS(\mathcal{N}) \leq \text{target flops}$$</p>
+<p>$$\mathcal{N}: \text{ConvNet}$$
+$$ \mathcal{F}_i: \text{Layer architecture}$$
+$$L_i: \text{Network length}$$
+$$C_i: \text{Width}$$
+$$H_i, W_i: \text{Input resolution}$$</p>
+<p>$$
+{max}_{d, w, r} \space\space\space\space Accuracy(\mathcal{N}(d, w, r))
+$$
+$$s.t. \space\space\space\space \mathcal{N}(d, w, r) = \bigodot_{i=1&hellip;s}\hat{\mathcal{F}}_i^{d \cdot \hat{L}_i}(X_{\langle r\cdot \hat{H}_i, r \cdot \hat{W}_i, w\cdot \hat{C}_i \rangle} )$$
+$$Memory(\mathcal{N}) \leq \text{target memory}$$
+$$FLOPS(\mathcal{N}) \leq \text{target flops}$$</p>
 <h2 id="scaling-dimensions">Scaling Dimensions</h2>
 <ul>
 <li>두번째 문제는 d, w, r 이 서로 dependent 하고 제한된 리소스에 따라 값이 변화.</li>
@@ -228,7 +237,7 @@ URL: <a href="https://arxiv.org/abs/1905.11946">https://arxiv.org/abs/1905.11946
 <li>Observation 2: 세 요소의 balance가 매우 중요..</li>
 <li>다음과 같은 compound scaling method 제안.</li>
 </ul>
-<p>$$\phi: \text{Compound Coefficient} \ depth: d = \alpha^\phi \ width: w = \beta^\phi \ resolution: r = \gamma^\phi \ \text{s.t. }\alpha \cdot \beta^2 \cdot \gamma^2 \approx 2 \ \alpha \ge 1, \beta \ge 1, \gamma \ge 1$$</p>
+<p>$$\phi: \text{Compound Coefficient} \\ depth: d = \alpha^\phi \\ width: w = \beta^\phi \\ resolution: r = \gamma^\phi \\ \text{s.t. }\alpha \cdot \beta^2 \cdot \gamma^2 \approx 2 \\ \alpha \ge 1, \beta \ge 1, \gamma \ge 1$$</p>
 <ul>
 <li>각 값은 small grid search로 결정된 상수 값.</li>
 </ul>
@@ -244,14 +253,14 @@ URL: <a href="https://arxiv.org/abs/1905.11946">https://arxiv.org/abs/1905.11946
 <ul>
 <li>Step 1
 <ul>
-<li>$\phi$ =1 로 고정</li>
+<li>\(\phi\) =1 로 고정</li>
 <li>식 2, 3을 기반으로 하여 small grid search</li>
-<li>EfficientNet-B0에 가장 적합한 값을 $\alpha$=1.2, $\beta$=1.1, $\gamma$=1.15</li>
+<li>EfficientNet-B0에 가장 적합한 값을 \(\alpha=1.2, \beta=1.1, \gamma=1.15\)</li>
 </ul>
 </li>
 <li>Step 2
 <ul>
-<li>$\alpha$, $\beta$, $\gamma$를 고정하고 $\phi$를 변경하여 실험.</li>
+<li>\(\alpha, \beta, \gamma\)를 고정하고 \(\phi\)를 변경하여 실험.</li>
 <li>Result (ImageNet Result for EfficientNet) 참고</li>
 </ul>
 </li>

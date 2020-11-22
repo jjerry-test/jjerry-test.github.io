@@ -183,17 +183,13 @@ URL: <a href="https://arxiv.org/abs/1912.01865">https://arxiv.org/abs/1912.01865
 <li>Style: 각 영상이 가지는 독특한 외관적 특성</li>
 </ul>
 <figure>
-    <img src="/images/post/starganv2/Untitled.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled.png"/> 
 </figure>
 
 <h1 id="stargan-v2">StarGAN v2</h1>
 <h2 id="proposed-framework">Proposed framework</h2>
 <figure>
-    <img src="/images/post/starganv2/Untitled_1.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_1.png"/> 
 </figure>
 
 <ul>
@@ -238,7 +234,7 @@ URL: <a href="https://arxiv.org/abs/1912.01865">https://arxiv.org/abs/1912.01865
 </ul>
 </li>
 </ul>
-<p>$$\mathcal{L}<em>{adv}=\mathbb{E}</em>{\mathrm{x},y}[\log{D_y}(\mathrm{x})] + \mathbb{E}<em>{\mathrm{x}, \tilde{y}, \mathrm{z}}[\log{(1-D</em>{\tilde{y}}(G(\mathrm{x}, \tilde{\mathrm{s}})))}$$</p>
+<p>$$\mathcal{L}_{adv}=\mathbb{E}_{\mathrm{x},y}[\log{D_y}(\mathrm{x})] + \mathbb{E}_{\mathrm{x}, \tilde{y}, \mathrm{z}}[\log{(1-D_{\tilde{y}}(G(\mathrm{x}, \tilde{\mathrm{s}})))}$$</p>
 <ul>
 <li>Style reconstruction
 <ul>
@@ -246,7 +242,7 @@ URL: <a href="https://arxiv.org/abs/1912.01865">https://arxiv.org/abs/1912.01865
 </ul>
 </li>
 </ul>
-<p>$$\mathcal{L}<em>{sty}=\mathbb{E}</em>{\mathrm{x},\tilde{y}, \mathrm{z}}[\parallel\tilde{\mathrm{s}}-E_{\tilde{y}}(G(\mathrm{x}, \tilde{\mathrm{s}}))\parallel_1]$$</p>
+<p>$$\mathcal{L}_{sty}=\mathbb{E}_{\mathrm{x},\tilde{y}, \mathrm{z}}[\parallel\tilde{\mathrm{s}}-E_{\tilde{y}}(G(\mathrm{x}, \tilde{\mathrm{s}}))\parallel_1]$$</p>
 <ul>
 <li>Style diversification
 <ul>
@@ -256,7 +252,7 @@ URL: <a href="https://arxiv.org/abs/1912.01865">https://arxiv.org/abs/1912.01865
 </ul>
 </li>
 </ul>
-<p>$$\mathcal{L}<em>{ds}=\mathbb{E}</em>{\mathrm{x},\tilde{y}, \mathrm{z}_1, \mathrm{z}_2}[\parallel G(\mathrm{x}, \tilde{\mathrm{s}}_1) - G(\mathrm{x}, \tilde{\mathrm{s}}_2) \parallel_1]$$</p>
+<p>$$\mathcal{L}_{ds}=\mathbb{E}_{\mathrm{x},\tilde{y}, \mathrm{z}_1, \mathrm{z}_2}[\parallel G(\mathrm{x}, \tilde{\mathrm{s}}_1) - G(\mathrm{x}, \tilde{\mathrm{s}}_2) \parallel_1]$$</p>
 <ul>
 <li>Preserving source characteristics
 <ul>
@@ -265,13 +261,13 @@ URL: <a href="https://arxiv.org/abs/1912.01865">https://arxiv.org/abs/1912.01865
 </ul>
 </li>
 </ul>
-<p>$$\mathcal{L}<em>{cyc}=\mathbb{E}</em>{\mathrm{x}, y, \tilde{y}, \mathrm{z}}[\parallel \mathrm{x} - G(G(\mathrm{x}, \tilde{\mathrm{s}}), \hat{\mathrm{s}})\parallel_1]$$</p>
+<p>$$\mathcal{L}_{cyc}=\mathbb{E}_{\mathrm{x}, y, \tilde{y}, \mathrm{z}}[\parallel \mathrm{x} - G(G(\mathrm{x}, \tilde{\mathrm{s}}), \hat{\mathrm{s}})\parallel_1]$$</p>
 <ul>
 <li>
 <p>Full objective</p>
-<p>$$\mathcal{L}<em>D = -\mathcal{L}</em>{adv} \ \mathcal{L}<em>{F, G, E}=\mathcal{L}</em>{adv} + \lambda_{sty} \mathcal{L}_{sty} - \lambda_{ds} \mathcal{L}_{ds} + \lambda_{cyc} \mathcal{L}_{cyc}$$</p>
+<p>$$\mathcal{L}_D = -\mathcal{L}_{adv} \ \mathcal{L}_{F, G, E}=\mathcal{L}_{adv} + \lambda_{sty} \mathcal{L}_{sty} - \lambda_{ds} \mathcal{L}_{ds} + \lambda_{cyc} \mathcal{L}_{cyc}$$</p>
 <ul>
-<li>About $\lambda$</li>
+<li>About \(\lambda\)</li>
 </ul>
 </li>
 </ul>
@@ -331,18 +327,14 @@ URL: <a href="https://arxiv.org/abs/1912.01865">https://arxiv.org/abs/1912.01865
 <li>정량적 평가를 보면 추가할 때마다 좋아지는 것을 볼 수 있음.</li>
 </ul>
 <figure>
-    <img src="/images/post/starganv2/Untitled_5.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_5.png"/> 
 </figure>
 
 <ul>
 <li>각 단계별 생성한 영상의 결과</li>
 </ul>
 <figure>
-    <img src="/images/post/starganv2/Untitled_6.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_6.png"/> 
 </figure>
 
 <h2 id="comparison-on-diverse-image-synthesis">Comparison on diverse image synthesis</h2>
@@ -351,30 +343,22 @@ URL: <a href="https://arxiv.org/abs/1912.01865">https://arxiv.org/abs/1912.01865
 <li>Latent-guided synthesis ( Latent code 만을 이용하여 생성 )</li>
 </ul>
 <figure>
-    <img src="/images/post/starganv2/Untitled_7.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_7.png"/> 
 </figure>
 
 <figure>
-    <img src="/images/post/starganv2/Untitled_8.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_8.png"/> 
 </figure>
 
 <ul>
 <li>Referenc-guided synthesis ( Style code 를 이용한 생성 )</li>
 </ul>
 <figure>
-    <img src="/images/post/starganv2/Untitled_9.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_9.png"/> 
 </figure>
 
 <figure>
-    <img src="/images/post/starganv2/Untitled_10.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_10.png"/> 
 </figure>
 
 <ul>
@@ -385,9 +369,7 @@ URL: <a href="https://arxiv.org/abs/1912.01865">https://arxiv.org/abs/1912.01865
 </li>
 </ul>
 <figure>
-    <img src="/images/post/starganv2/Untitled_11.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_11.png"/> 
 </figure>
 
 <h1 id="result">Result</h1>
@@ -395,15 +377,11 @@ URL: <a href="https://arxiv.org/abs/1912.01865">https://arxiv.org/abs/1912.01865
 <li>겁나&hellip;.잘 생성함&hellip;</li>
 </ul>
 <figure>
-    <img src="/images/post/starganv2/Untitled_12.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_12.png"/> 
 </figure>
 
 <figure>
-    <img src="/images/post/starganv2/Untitled_13.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv2/Untitled_13.png"/> 
 </figure>
 
 

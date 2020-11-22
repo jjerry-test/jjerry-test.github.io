@@ -166,9 +166,7 @@ URL: <a href="https://arxiv.org/abs/1711.09020">https://arxiv.org/abs/1711.09020
 <li>Multi domain image translation 이라고 하면 다음 사진과 같이 머리 색, 성별, 연령대 등과 같이 여러 condition 에 대응하는 영상을 생성.</li>
 </ul>
 <figure>
-    <img src="/images/post/starganv1/Untitled.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv1/Untitled.png"/> 
 </figure>
 
 <ul>
@@ -176,23 +174,19 @@ URL: <a href="https://arxiv.org/abs/1711.09020">https://arxiv.org/abs/1711.09020
 <li>StarGAN은 한 1개의 generator로 n개의 domain 을 적용.</li>
 </ul>
 <figure>
-    <img src="/images/post/starganv1/Untitled_1.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv1/Untitled_1.png"/> 
 </figure>
 
 <h1 id="star-generative-adversarial-networks">Star Generative Adversarial Networks</h1>
 <figure>
-    <img src="/images/post/starganv1/Untitled_2.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv1/Untitled_2.png"/> 
 </figure>
 
 <h1 id="loss-functions">Loss functions</h1>
 <ul>
 <li>Adversarial Loss</li>
 </ul>
-<p>$$\mathcal{L}<em>{adv} = \mathbb{E}<em>x [\log D</em>{src}(x)] + \mathbb{E}</em>{x, c} [\log (1-D_{src}(G(x,c)))] - \lambda_{gp}\mathbb{E}_{\hat{x}}[(\Vert \nabla_{\hat{x}}D_{src}(\hat{x})\Vert_2 -1)^2]$$</p>
+<p>$$\mathcal{L}_{adv} = \mathbb{E}_x [\log D_{src}(x)] + \mathbb{E}_{x, c} [\log (1-D_{src}(G(x,c)))] - \lambda_{gp}\mathbb{E}_{\hat{x}}[(\Vert \nabla_{\hat{x}}D_{src}(\hat{x})\Vert_2 -1)^2]$$</p>
 <p>$$\lambda_{gp} = 10$$</p>
 <ul>
 <li>Domain Classification Loss</li>
@@ -202,37 +196,29 @@ URL: <a href="https://arxiv.org/abs/1711.09020">https://arxiv.org/abs/1711.09020
 <ul>
 <li>Reconstruction Loss</li>
 </ul>
-<p>$$\mathcal{L}<em>{rec} = \mathbb{E}</em>{x, c, c'}[\Vert x-G(G(x, c), c')\Vert_1]$$</p>
+<p>$$\mathcal{L}_{rec} = \mathbb{E}_{x, c, c'}[\Vert x-G(G(x, c), c')\Vert_1]$$</p>
 <ul>
 <li>Full Objective</li>
 </ul>
-<p>$$\mathcal{L}<em>D = -\mathcal{L}</em>{adv} + \lambda_{cls}\mathcal{L}^r_{cls}$$</p>
-<p>$$\mathcal{L}<em>G = \mathcal{L}</em>{adv} + \lambda_{cls}\mathcal{L}^f_{cls}+\lambda_{rec}\mathcal{L}_{rec}$$</p>
+<p>$$\mathcal{L}_D = -\mathcal{L}_{adv} + \lambda_{cls}\mathcal{L}^r_{cls}$$</p>
+<p>$$\mathcal{L}_G = \mathcal{L}_{adv} + \lambda_{cls}\mathcal{L}^f_{cls}+\lambda_{rec}\mathcal{L}_{rec}$$</p>
 <p>$$\lambda_{cls} = 1, \lambda_{rec} = 10$$</p>
 <h1 id="result">Result</h1>
 <figure>
-    <img src="/images/post/starganv1/Untitled_3.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv1/Untitled_3.png"/> 
 </figure>
 
 <figure>
-    <img src="/images/post/starganv1/Untitled_4.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv1/Untitled_4.png"/> 
 </figure>
 
 <h1 id="training-detail">Training Detail</h1>
 <figure>
-    <img src="/images/post/starganv1/Untitled_5.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv1/Untitled_5.png"/> 
 </figure>
 
 <figure>
-    <img src="/images/post/starganv1/Untitled_6.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/starganv1/Untitled_6.png"/> 
 </figure>
 
 

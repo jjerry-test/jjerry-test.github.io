@@ -170,9 +170,7 @@ URL: <a href="https://ai.facebook.com/research/publications/end-to-end-object-de
 <li>새로운 Loss function 도입.</li>
 </ul>
 <figure>
-    <img src="/images/post/DETR/Untitled.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/DETR/Untitled.png"/> 
 </figure>
 
 <h1 id="related-works">Related Works</h1>
@@ -203,15 +201,13 @@ URL: <a href="https://ai.facebook.com/research/publications/end-to-end-object-de
 <li>DETR은 크게 두 개의 장점이 있음. → a set prediction loss, a architecture</li>
 </ul>
 <figure>
-    <img src="/images/post/DETR/Untitled_1.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/DETR/Untitled_1.png"/> 
 </figure>
 
 <h2 id="object-detection-set-prediction-loss">Object detection set prediction loss</h2>
-<p>$$\hat{\sigma} = {argmin}<em>{\sigma \in \mathfrak{S}<em>N} \sum^N_i \mathcal{L}</em>{match}(y_i, \hat{y}</em>{\sigma(i)})$$</p>
-<p>$$\mathcal{L}<em>{match}(y_i, \hat{y}</em>{\sigma(i)}) = -1_{c_i \neq \phi}\hat{p}_{\sigma(i)}(c_i) +1_{c_i \neq \phi}\mathcal{L}_{box}(b_i, \hat{b}_{\sigma(i)})$$</p>
-<p>$$\mathcal{L}<em>{Hungarian}(y, \hat{y}) = \sum^N_i[-\log\hat{p}</em>{\hat{\sigma}(i)}(c_i) +1_{c_i \neq \phi}\mathcal{L}_{box}(b_i, \hat{b}_{\hat{\sigma}(i)})]$$</p>
+<p>$$\hat{\sigma} = {argmin}_{\sigma \in \mathfrak{S}_N} \sum^N_i \mathcal{L}_{match}(y_i, \hat{y}_{\sigma(i)})$$</p>
+<p>$$\mathcal{L}_{match}(y_i, \hat{y}_{\sigma(i)}) = -1_{c_i \neq \phi}\hat{p}_{\sigma(i)}(c_i) +1_{c_i \neq \phi}\mathcal{L}_{box}(b_i, \hat{b}_{\sigma(i)})$$</p>
+<p>$$\mathcal{L}_{Hungarian}(y, \hat{y}) = \sum^N_i[-\log\hat{p}_{\hat{\sigma}(i)}(c_i) +1_{c_i \neq \phi}\mathcal{L}_{box}(b_i, \hat{b}_{\hat{\sigma}(i)})]$$</p>
 <h3 id="bounding-box-loss">Bounding box loss</h3>
 <p>$$\lambda_{iou}\mathcal{L}_{iou}(b_i, \hat{b}_{\sigma(i)}) + \lambda_{\mathrm{L}1}|b_i - \hat{b}_{\sigma(i)}|_1$$</p>
 <h2 id="detr-architecture">DETR architecture</h2>
@@ -244,29 +240,21 @@ URL: <a href="https://ai.facebook.com/research/publications/end-to-end-object-de
 <h1 id="experiment">Experiment</h1>
 <h2 id="comparison-with-faster-r-cnn">Comparison with Faster R-CNN</h2>
 <figure>
-    <img src="/images/post/DETR/Untitled_2.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/DETR/Untitled_2.png"/> 
 </figure>
 
 <h2 id="ablations">Ablations</h2>
 <figure>
-    <img src="/images/post/DETR/Untitled_3.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/DETR/Untitled_3.png"/> 
 </figure>
 
 <figure>
-    <img src="/images/post/DETR/Untitled_4.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/DETR/Untitled_4.png"/> 
 </figure>
 
 <h2 id="panoptic-segmentation">Panoptic segmentation</h2>
 <figure>
-    <img src="/images/post/DETR/Untitled_5.png"/> <figcaption>
-            <h4>image</h4>
-        </figcaption>
+    <img src="/images/post/DETR/Untitled_5.png"/> 
 </figure>
 
 <h2 id="ps">P.S</h2>
