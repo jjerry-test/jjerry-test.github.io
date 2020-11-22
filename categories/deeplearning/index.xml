@@ -9,30 +9,11 @@
     <lastBuildDate>Sun, 15 Nov 2020 18:30:46 +0600</lastBuildDate><atom:link href="https://jjerry-test.github.io/categories/deeplearning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MediaPipe - (3)</title>
-      <link>https://jjerry-test.github.io/blog/mediapipe_3/</link>
+      <link>https://jjerry-test.github.io/blog/mediapipe/</link>
       <pubDate>Sun, 15 Nov 2020 18:30:46 +0600</pubDate>
       
-      <guid>https://jjerry-test.github.io/blog/mediapipe_3/</guid>
+      <guid>https://jjerry-test.github.io/blog/mediapipe/</guid>
       <description>저번 Mediapipe의 Hands 포스팅에 이어서 Mediapipe의 Pose 를 테스트 해보겠습니다.</description>
-    </item>
-    
-    <item>
-      <title>MediaPipe - (2)</title>
-      <link>https://jjerry-test.github.io/blog/mediapipe_2/</link>
-      <pubDate>Sat, 14 Nov 2020 18:30:46 +0600</pubDate>
-      
-      <guid>https://jjerry-test.github.io/blog/mediapipe_2/</guid>
-      <description>저번 Mediapipe와 Face mesh 포스팅에 이어서 Mediapipe의 Hands 를 테스트 해보겠습니다.</description>
-    </item>
-    
-    <item>
-      <title>MediaPipe - (1)</title>
-      <link>https://jjerry-test.github.io/blog/mediapipe_1/</link>
-      <pubDate>Fri, 13 Nov 2020 18:30:46 +0600</pubDate>
-      
-      <guid>https://jjerry-test.github.io/blog/mediapipe_1/</guid>
-      <description>이번 포스팅에선 Google의 MediaPipe에 대해서 다뤄보려합니다.
-MediaPipe is a framework for building multimodal (eg.</description>
     </item>
     
     <item>
