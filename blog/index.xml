@@ -6,7 +6,17 @@
     <description>Recent content in Blogs on Jerry</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 18:30:46 +0600</lastBuildDate><atom:link href="https://jjerry-test.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 20:41:18 +0900</lastBuildDate><atom:link href="https://jjerry-test.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Blog</title>
+      <link>https://jjerry-test.github.io/blog/hugo-blog/</link>
+      <pubDate>Mon, 23 Nov 2020 20:41:18 +0900</pubDate>
+      
+      <guid>https://jjerry-test.github.io/blog/hugo-blog/</guid>
+      <description>이번에 Github Blog를 이전하게 되었습니다!
+기존에는 Jekyll 기반의 블로그를 사용했었는데요.</description>
+    </item>
+    
     <item>
       <title>개인적인 CODNS CRONTAB</title>
       <link>https://jjerry-test.github.io/blog/codns/</link>
@@ -531,7 +541,7 @@ CPU와 GPU 중에서도 GPU 버전 설치에 대해 알려드릴거에요!</desc
     </item>
     
     <item>
-      <title>Github 블로그 만들기</title>
+      <title>Jekyll Blog</title>
       <link>https://jjerry-test.github.io/blog/gitblog/</link>
       <pubDate>Wed, 24 Oct 2018 18:30:46 +0600</pubDate>
       

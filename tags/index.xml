@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Jerry</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Nov 2020 18:30:46 +0600</lastBuildDate><atom:link href="https://jjerry-test.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 20:41:18 +0900</lastBuildDate><atom:link href="https://jjerry-test.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://jjerry-test.github.io/tags/hugo/</link>
+      <pubDate>Mon, 23 Nov 2020 20:41:18 +0900</pubDate>
+      
+      <guid>https://jjerry-test.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Hardware</title>
       <link>https://jjerry-test.github.io/tags/hardware/</link>
